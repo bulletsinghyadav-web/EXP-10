@@ -1,0 +1,12 @@
+com\hostelmanagement\hostel\controller\ComplaintController.class
+com\hostelmanagement\hostel\controller\DashboardController.class
+com\hostelmanagement\hostel\controller\StudentController.class
+com\hostelmanagement\hostel\repository\ComplaintRepository.class
+com\hostelmanagement\hostel\repository\StudentRepository.class
+com\hostelmanagement\hostel\model\Room.class
+com\hostelmanagement\hostel\model\Student.class
+com\hostelmanagement\hostel\controller\RoomController.class
+com\hostelmanagement\hostel\model\Complaint.class
+com\hostelmanagement\hostel\controller\AllocationController.class
+com\hostelmanagement\hostel\HostelApplication.class
+com\hostelmanagement\hostel\repository\RoomRepository.class

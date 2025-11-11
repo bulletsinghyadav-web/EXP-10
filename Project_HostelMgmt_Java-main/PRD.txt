@@ -1,0 +1,151 @@
+1. 🎯 Introduction & Objective
+Problem
+Manual tracking of hostel admissions, room assignments, and student issues is inefficient, time-consuming, and prone to human error. Administrators lack a central, reliable way to view current occupancy or address student needs quickly.
+
+Solution
+A lightweight, web-based Student Hostel Management System (SHMS) built with Spring Boot. This system will digitize the core administrative tasks, providing a single source of truth for student records, room status, and complaints.
+
+Project Goal
+The primary goal of this project is to build a functional, beginner-friendly Spring Boot application that demonstrates mastery of the MVC (Model-View-Controller) pattern. It will focus on fundamental CRUD (Create, Read) operations.
+
+2. 👥 User Personas
+Hostel Admin (Primary User):
+
+Who: The hostel warden or administrator.
+
+Needs: Wants to register new students, assign them to rooms, and see a list of all students and their assigned rooms. They also need to review student-submitted complaints.
+
+Goal: A simple, all-in-one dashboard to manage daily hostel operations.
+
+Student (Secondary User):
+
+Who: Any student residing in the hostel.
+
+Needs: A quick and easy way to report a problem (e.g., "broken light," "no hot water") to the admin.
+
+Goal: To submit a complaint without needing to find the admin in person.
+
+3. 📋 Functional Requirements (Core Features)
+This project is scoped to four key features.
+
+Feature 1: Student Admission Management
+Description: The core system for adding and viewing student records.
+
+User Stories:
+
+"As an Admin, I want to access a form to register a new student so I can add them to the system."
+
+"As an Admin, I want to see a list of all registered students and their details (including their assigned room) on one page."
+
+Requirements:
+
+A web page (/students/new) with an HTML form to create a new Student.
+
+The Student model must include fields for: fullName, email, phoneNumber, guardianName.
+
+Submitting the form saves the new student to the database.
+
+A web page (/students) that displays all students from the database in an HTML table.
+
+Feature 2: Room Inventory & Allocation
+Description: Managing the hostel's room inventory and assigning students to rooms.
+
+User Stories:
+
+"As an Admin, I want to add new rooms to the hostel system so they become available for allocation."
+
+"As an Admin, I want to see a list of all rooms and their current status ('Vacant' or 'Occupied')."
+
+"As an Admin, I want to assign a 'Vacant' room to a student who does not yet have one."
+
+Requirements:
+
+A simple form (/rooms/new) to create a new Room.
+
+The Room model must include fields for: roomNumber (e.g., "101A") and status ("Vacant" / "Occupied").
+
+A page (/rooms) to display all rooms and their status.
+
+A dedicated "Allocation" page (/allocate):
+
+This page will show two dropdown menus:
+
+A list of students who do not have a room.
+
+A list of rooms with the status "Vacant."
+
+A "Assign" button will link the student to the room, update the Room status to "Occupied," and save this relationship.
+
+Feature 3: Complaint Handling
+Description: A simple system for students to submit complaints and for admins to review them.
+
+User Stories:
+
+"As a Student, I want to fill out a simple form to submit a maintenance or food complaint."
+
+"As an Admin, I want to see a list of all submitted complaints in one place."
+
+Requirements:
+
+A public web page (/complaint) with a form.
+
+The Complaint model must include fields for: studentName, roomNumber, and complaintDetails (a text area).
+
+Submitting the form saves the complaint to the database.
+
+An admin-only page (/admin/complaints) that displays all submitted complaints in a list or table.
+
+Feature 4: Admin Dashboard
+Description: A central navigation hub for the admin.
+
+User Stories:
+
+"As an Admin, when I first open the application, I want a simple home page that links to all my main tasks."
+
+Requirements:
+
+A homepage (/admin or /) that acts as the main dashboard.
+
+This page will contain links (styled as buttons or text):
+
+"Register New Student"
+
+"View All Students"
+
+"View All Rooms"
+
+"Allocate Room"
+
+"View Complaints"
+
+4. ⚙️ Non-Functional Requirements
+Technology Stack:
+
+Backend: Spring Boot, Spring Web (MVC)
+
+Frontend: Thymeleaf (for HTML templating)
+
+Database: H2 In-Memory Database (data will reset every time the application restarts)
+
+Data Access: Spring Data JPA
+
+Build Tool: Maven
+
+User Interface: The UI must be clean, simple, and functional. No complex styling (CSS) is required; standard HTML5 is acceptable.
+
+Security: This project has no user authentication (login/password). All admin pages are considered "public" for this beginner scope.
+
+5. ❌ Out of Scope (Future Work)
+The following features will not be implemented in this version:
+
+User login/password or role-based access (e.g., ROLE_ADMIN, ROLE_STUDENT).
+
+Fee and billing management.
+
+Attendance tracking.
+
+Editing or Deleting existing student or room records (this version focuses only on Create and Read).
+
+Marking complaints as "Resolved."
+
+Advanced reporting or analytics.

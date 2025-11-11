@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Hostel Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.8em;
+        }
+
+        ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            display: block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 20px 30px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        hr {
+            max-width: 800px;
+            margin: 40px auto;
+            border: none;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            margin: 20px 0;
+        }
+
+        small {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hostel Management System - Admin Dashboard</h1>
+
+    <h2>Main Menu</h2>
+    <ul>
+        <li><a href="/students/new">Register New Student</a></li>
+        <li><a href="/students">View All Students</a></li>
+        <li><a href="/rooms/new">Add New Room</a></li>
+        <li><a href="/rooms">View All Rooms</a></li>
+        <li><a href="/allocate">Allocate Room</a></li>
+        <li><a href="/admin/complaints">View Complaints</a></li>
+        <li><a href="/complaint">Submit Complaint (Student Page)</a></li>
+    </ul>
+
+    <hr>
+    <p><small>Student Hostel Management System (SHMS) - Spring Boot Application</small></p>
+</body>
+</html>
+
